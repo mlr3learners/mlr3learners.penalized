@@ -8,10 +8,10 @@ test_that("autotest", {
 })
 
 test_that("unpenalized", {
-  task = tgen("simsurv")$generate(5)
-  learner = lrn("surv.penalized", unpenalized = c("height"))
+  task = tsk("rats")
+  learner = lrn("surv.penalized", unpenalized = c("litter"))
   learner$train(task)
-  expect_equal(names(learner$model@penalized), c("treatment", "weight"))
-  expect_equal(names(learner$model@unpenalized), c("height"))
+  expect_equal(names(learner$model@penalized), c("rx", "sexm"))
+  expect_equal(names(learner$model@unpenalized), c("litter"))
   expect_prediction_surv(learner$predict(task))
 })
