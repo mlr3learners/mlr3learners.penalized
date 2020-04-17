@@ -24,7 +24,6 @@
 #' @template seealso_learner
 #' @template example
 #' @export
-# <Adapt the name to your learner. For regression learners inherit = LearnerRegr>
 LearnerSurvPenalized = R6Class("LearnerSurvPenalized",
   inherit = LearnerSurv,
 
