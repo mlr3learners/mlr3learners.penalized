@@ -23,6 +23,7 @@ Suggests:
     checkmate,
     distr6,
     penalized,
+    pracma,
     rmarkdown,
     testthat
 Encoding: UTF-8
