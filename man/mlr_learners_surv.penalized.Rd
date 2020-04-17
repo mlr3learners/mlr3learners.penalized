@@ -5,15 +5,15 @@
 \alias{LearnerSurvPenalized}
 \title{Survival L1 and L2 Penalized Regression Learner}
 \description{
-A \link[mlr3:LearnerSurv]{mlr3::LearnerSurv} implementing penalized from package
+A \link[mlr3proba:LearnerSurv]{mlr3proba::LearnerSurv} implementing penalized from package
 \CRANpkg{penalized}.
 Calls \code{\link[penalized:penalized]{penalized::penalized()}}.
 }
 \details{
 The \code{penalized} and \code{unpenalized} arguments in the learner are implemented slightly
 differently than in \code{\link[penalized:penalized]{penalized::penalized()}}. Here, there is no parameter for \code{penalized} but
-instead it is assumed that every variable is penalized unless stated in the \code{unpenalized} parameter,
-see examples.
+instead it is assumed that every variable is penalized unless stated in the \code{unpenalized}
+parameter, see examples.
 }
 \section{Dictionary}{
 

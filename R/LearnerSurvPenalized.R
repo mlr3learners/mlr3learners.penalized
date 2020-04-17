@@ -3,7 +3,7 @@
 #' @name mlr_learners_surv.penalized
 #'
 #' @description
-#' A [mlr3::LearnerSurv] implementing penalized from package
+#' A [mlr3proba::LearnerSurv] implementing penalized from package
 #'   \CRANpkg{penalized}.
 #' Calls [penalized::penalized()].
 #'
