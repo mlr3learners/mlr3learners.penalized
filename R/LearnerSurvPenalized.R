@@ -119,7 +119,7 @@ LearnerSurvPenalized = R6Class("LearnerSurvPenalized",
 
       crank = as.numeric(sapply(x, function(y) sum(y[, 1] * c(y[, 2][1], diff(y[, 2])))))
 
-      PredictionSurv$new(task = task, distr = distr, crank = crank)
+      mlr3proba::PredictionSurv$new(task = task, distr = distr, crank = crank)
     }
   )
 )
