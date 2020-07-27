@@ -117,7 +117,7 @@ LearnerSurvPenalized = R6Class("LearnerSurvPenalized",
         distribution = "WeightedDiscrete", params = x,
         decorators = c("CoreStatistics", "ExoticStatistics"))
 
-      crank = as.numeric(sapply(x, function(y) sum(y$x * c(y$time[1], diff(y$time)))))
+      crank = as.numeric(sapply(x, function(y) sum(y$time * c(y$cdf[1], diff(y$cdf)))))
 
       mlr3proba::PredictionSurv$new(task = task, distr = distr, crank = crank)
     }
