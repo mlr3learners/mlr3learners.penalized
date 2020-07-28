@@ -108,7 +108,7 @@ LearnerSurvPenalized = R6Class("LearnerSurvPenalized",
       })
 
       # define WeightedDiscrete distr6 object from predicted survival function
-      x = rep(list(x = surv@time, cdf = 0), task$nrow)
+      x = rep(list(list(x = surv@time, cdf = 0)), task$nrow)
       for (i in 1:task$nrow) {
         x[[i]]$cdf = 1 - surv@curves[i, ]
       }
